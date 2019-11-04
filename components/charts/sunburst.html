@@ -1,0 +1,450 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<!-- Bootstrap core CSS -->
+<link href="../../bootstrap-4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<!-- Custom styles -->
+<link href="../../application/demo-custom.css" rel="stylesheet">
+</head>
+<body>
+<!-- Plotly JavaScript
+================================================== -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand" href="../../index.html">WebApp Demo</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+<li class="nav-item">
+  <a class="nav-link
+ active"
+ href="../bootstrap.html"
+ >Components</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="../../about/project.html"
+ >About</a>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<form class="form-inline my-2 my-md-0" action="http://localhost:4567/search">
+<input class="form-control" type="text" placeholder="Search...">
+</form>
+</ul>
+</div>
+</div>
+</nav>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<null>
+<br><ul class="nav nav-tabs">
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="../bootstrap.html"
+ >Bootstrap</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="../tables.html"
+ >Tables</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+ active"
+ href="../charts.html"
+ >Charts</a>
+</li>
+</ul>
+<null>
+<div style="margin:6px;">
+<div class="btn-toolbar" role="toolbar">
+<div class="btn-group mr-2" role="group">
+<a href="../charts.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+All</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="vbar.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+VBar</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="hbar.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+HBar</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="line.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Line</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="area.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Area</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="pie.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Pie</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="timeseries.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Timeseries</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="scatter.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Scatter</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="bubble.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Bubble</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="histogram.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Histogram</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="heatmap.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Heatmap</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="candlestick.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Candlestick</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="ohlc.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+OHLC</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="treemap.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Treemap</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="sunburst.html" class="btn btn-secondary btn-sm active" style="color: black;background-color: #d9d9d9;border-color: #cccccc;">
+Sunburst</a>
+</div>
+</div>
+</div>
+<div style="border-bottom:1px solid #dee2e6;">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<null>
+<br>
+<null>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Sunburst Chart
+</div>
+<div class="card-body">
+<null>
+<div id='sunburstDiv1' ></div>
+    <script>
+        var target_sunburstDiv1 = document.getElementById('sunburstDiv1');
+        var layout = {
+    height: 400,
+    width: 900,
+    showlegend: true,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['0-61','0-8','0-89','0-1','0-2','0-3','0-4','0-13','0-39','0-62','0-7','0-10','0-6','0-5','0-21','0-0','0-11','0-15','0-18','0-14','0-19','0-16','0-17','0-20','0-9','0-30','0-23','0-25','0-31','0-52','0-24','0-86','0-29','0-22','0-26','0-27','0-33','0-32','0-54','0-106','0-35','0-36','0-37','0-38','0-41','0-44','0-43','0-46','0-45','0-47','0-50','0-49','0-53','0-55','0-56','0-57','0-58','0-60','0-63','0-65','0-59','0-64','0-68','0-69','0-67','0-66','0-71','0-70','0-72','0-79','0-74','0-78','0-73','0-75','0-77','0-80','0-82','0-83','0-81','0-84','0-87','0-85','0-88','0-93','0-94','0-95','0-12','0-51','0-40','0-42','0-76','0-90','0-96','0-34','0-92','0-91','0-100','0-98','0-99','0-101','0-97','0-103','0-102','0-105','0-104','0-48','0-28','1-10','1-52','1-4','1-48','1-18','1-34','1-26','1-43','1-14','1-39','1-21','1-6','1-17','1-24','1-38','1-9','1-23','1-27','1-1','1-40','1-0','1-22','1-33','1-19','1-31','1-32','1-25','1-30','1-13','1-3','1-28','1-29','1-35','1-15','1-2','1-49','1-12','1-44','1-45','1-16','1-5','1-51','1-53','1-37','1-8','1-50','1-42','1-7','1-36','1-46','1-11','1-47','1-41','1-20','2-6','2-0','2-3','2-1','2-5','2-4','2-2','2-7'],
+labels: ['3M Company','ASML Holding N.V.','AT&T Inc.','AbbVie Inc.','Abbott Laboratories','Accenture plc','Adobe Inc.','Alibaba Group Holding Limited','Alphabet Inc.','Altria Group, Inc.','Amazon.com, Inc.','American Express Company','American Tower Corporation (REIT)','Amgen Inc.','Anheuser-Busch InBev SA/NV','Apple Inc.','AstraZeneca PLC','BHP Group','BP p.l.c.','Bank of America Corporation','Berkshire Hathaway Inc.','Booking Holdings Inc.','Bristol-Myers Squibb Company','British American Tobacco p.l.c.','Broadcom Inc.','CVS Health Corporation','Caterpillar Inc.','Charter Communications, Inc.','Chevron Corporation','China Life Insurance Company Limited','China Mobile Limited','China Petroleum & Chemical Corporation','Cisco Systems, Inc.','Citigroup Inc.','Comcast Corporation','Costco Wholesale Corporation','Danaher Corporation','Diageo plc','Eli Lilly and Company','Exxon Mobil Corporation','Facebook, Inc.','Fidelity National Information Services, Inc.','General Electric Company','Gilead Sciences, Inc.','GlaxoSmithKline plc','HSBC Holdings plc','Honeywell International Inc.','Intel Corporation','International Business Machines Corporation','Itau Unibanco Holding S.A.','JPMorgan Chase & Co.','Johnson & Johnson','Linde plc','Lockheed Martin Corporation','Lowe\'s Companies, Inc.','Mastercard Incorporated','McDonald\'s Corporation','Medtronic plc','Merck & Co., Inc.','Microsoft Corporation','Mondelez International, Inc.','Morgan Stanley','NIKE, Inc.','NVIDIA Corporation','Netflix, Inc.','NextEra Energy, Inc.','Novartis AG','Novo Nordisk A/S','Oracle Corporation','PayPal Holdings, Inc.','PepsiCo, Inc.','PetroChina Company Limited','Petroleo Brasileiro S.A. - Petrobras','Pfizer Inc.','Philip Morris International Inc.','QUALCOMM Incorporated','Rio Tinto Group','Royal Bank of Canada','Royal Dutch Shell plc','SAP SE','Sanofi','Starbucks Corporation','Stryker Corporation','TOTAL S.A.','Taiwan Semiconductor Manufacturing Company Limited','Texas Instruments Incorporated','The Boeing Company','The Coca-Cola Company','The Goldman Sachs Group, Inc.','The Home Depot, Inc.','The Procter & Gamble Company','The Toronto-Dominion Bank','The Unilever Group','The Walt Disney Company','Thermo Fisher Scientific Inc.','Toyota Motor Corporation','U.S. Bancorp','Union Pacific Corporation','United Parcel Service, Inc.','United Technologies Corporation','UnitedHealth Group Incorporated','Verizon Communications Inc.','Visa Inc.','Walmart Inc.','Wells Fargo & Company','iShares Core S&P 500 ETF','salesforce.com, inc.','Aerospace/Defense Products & Services','Air Delivery & Freight Services','Application Software','Auto Manufacturers - Major','Beverages - Brewers','Beverages - Soft Drinks','Beverages - Wineries & Distillers','Biotechnology','Business Services','Business Software & Services','CATV Systems','Catalog & Mail Order Houses','Cigarettes','Communication Equipment','Confectioners','Credit Services','Discount, Variety Stores','Diversified Machinery','Drug Manufacturers - Major','Electric Utilities','Electronic Equipment','Entertainment - Diversified','Exchange Traded Fund','Farm & Construction Machinery','Foreign Money Center Banks','Foreign Regional Banks','Health Care Plans','Home Improvement Stores','Industrial Metals & Minerals','Information Technology Services','Internet Information Providers','Investment Brokerage - National','Life Insurance','Major Integrated Oil & Gas','Medical Appliances & Equipment','Medical Laboratories & Research','Money Center Banks','Oil & Gas Drilling & Exploration','Personal Products','Property & Casualty Insurance','REIT - Diversified','Railroads','Regional - Midwest Banks','Restaurants','Semiconductor - Broad Line','Semiconductor - Integrated Circuits','Semiconductor - Specialized','Semiconductor Equipment & Materials','Specialty Chemicals','Specialty Eateries','Specialty Retail, Other','Telecom Services - Domestic','Textile - Apparel Footwear & Accessories','Wireless Communications','Basic Materials','Consumer Goods','Financial','Healthcare','Industrial Goods','Services','Technology','Utilities'],
+parents: ['1-27','1-7','1-47','1-1','1-2','1-3','1-4','1-11','1-28','1-17','1-6','1-9','1-5','1-1','1-18','1-0','1-1','1-13','1-15','1-12','1-16','1-14','1-1','1-17','1-8','1-25','1-19','1-21','1-15','1-35','1-20','1-15','1-24','1-12','1-22','1-23','1-27','1-26','1-1','1-15','1-28','1-3','1-27','1-1','1-1','1-31','1-27','1-8','1-3','1-32','1-12','1-1','1-36','1-10','1-30','1-9','1-37','1-2','1-1','1-39','1-38','1-29','1-41','1-42','1-21','1-40','1-1','1-43','1-4','1-9','1-34','1-15','1-44','1-1','1-17','1-24','1-13','1-12','1-15','1-4','1-1','1-46','1-2','1-15','1-50','1-8','1-10','1-34','1-29','1-30','1-45','1-12','1-45','1-22','1-49','1-48','1-53','1-51','1-52','1-10','1-25','1-47','1-9','1-23','1-12','1-33','1-4','2-5','2-4','2-2','2-0','2-0','2-0','2-0','2-1','2-4','2-2','2-4','2-4','2-0','2-2','2-0','2-3','2-4','2-5','2-1','2-7','2-0','2-4','2-3','2-5','2-3','2-3','2-1','2-4','2-6','2-2','2-2','2-3','2-3','2-6','2-1','2-1','2-3','2-6','2-0','2-3','2-3','2-4','2-3','2-4','2-2','2-2','2-2','2-2','2-6','2-4','2-4','2-2','2-0','2-2','','','','','','','',''],
+values: [97256.84, 113493.29, 281246.44, 115832.84, 146093.29, 122888.64, 131355.11, 465205.87, 878380.35, 85913.92, 879050.37, 97030.46, 93296.92, 122944.49, 270591.44, 1125501.79, 125200.5, 118981.48, 133501.55, 289083.96, 520059.8, 87445.2, 90932.45, 80032.86, 115649.13, 85676.94, 78796.35, 103451.09, 224924.81, 109617.24, 169072.9, 83407.0, 200181.45, 166244.22, 206717.91, 131431.96, 97836.92, 93712.85, 109083.93, 290423.39, 540348.71, 79882.16, 79154.61, 80711.5, 110421.03, 154920.79, 123385.04, 251446.79, 120451.74, 84919.42, 404513.2, 340927.96, 106371.9, 105007.61, 86163.75, 276788.13, 145645.4, 142512.19, 210462.41, 1099998.13, 75583.08, 77415.75, 141821.39, 125935.11, 123525.14, 113998.16, 220389.13, 101221.2, 179356.89, 125434.09, 190438.68, 150952.57, 100837.92, 206197.54, 127721.36, 100960.57, 90603.86, 116949.73, 238496.57, 163741.26, 116126.21, 100069.2, 79952.65, 141525.06, 249660.1, 112221.6, 191843.86, 229520.13, 78294.19, 259331.52, 307935.67, 104765.53, 159748.62, 235134.13, 120103.95, 224881.35, 89853.83, 118534.65, 99823.88, 123457.82, 234124.35, 248890.04, 390761.74, 339095.07, 227575.59, 190982.02, 135750.82, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+type: 'sunburst',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_sunburstDiv1, data, layout);            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Sunburst Chart
+</div>
+<div class="card-body">
+<null>
+<div id='sunburstDiv2' ></div>
+    <script>
+        var target_sunburstDiv2 = document.getElementById('sunburstDiv2');
+        var layout = {
+    height: 200,
+    width: 450,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['0-61','0-8','0-89','0-1','0-2','0-3','0-4','0-13','0-39','0-62','0-7','0-10','0-6','0-5','0-21','0-0','0-11','0-15','0-18','0-14','0-19','0-16','0-17','0-20','0-9','0-30','0-23','0-25','0-31','0-52','0-24','0-86','0-29','0-22','0-26','0-27','0-33','0-32','0-54','0-106','0-35','0-36','0-37','0-38','0-41','0-44','0-43','0-46','0-45','0-47','0-50','0-49','0-53','0-55','0-56','0-57','0-58','0-60','0-63','0-65','0-59','0-64','0-68','0-69','0-67','0-66','0-71','0-70','0-72','0-79','0-74','0-78','0-73','0-75','0-77','0-80','0-82','0-83','0-81','0-84','0-87','0-85','0-88','0-93','0-94','0-95','0-12','0-51','0-40','0-42','0-76','0-90','0-96','0-34','0-92','0-91','0-100','0-98','0-99','0-101','0-97','0-103','0-102','0-105','0-104','0-48','0-28','1-6','1-0','1-3','1-1','1-5','1-4','1-2','1-7'],
+labels: ['3M Company','ASML Holding N.V.','AT&T Inc.','AbbVie Inc.','Abbott Laboratories','Accenture plc','Adobe Inc.','Alibaba Group Holding Limited','Alphabet Inc.','Altria Group, Inc.','Amazon.com, Inc.','American Express Company','American Tower Corporation (REIT)','Amgen Inc.','Anheuser-Busch InBev SA/NV','Apple Inc.','AstraZeneca PLC','BHP Group','BP p.l.c.','Bank of America Corporation','Berkshire Hathaway Inc.','Booking Holdings Inc.','Bristol-Myers Squibb Company','British American Tobacco p.l.c.','Broadcom Inc.','CVS Health Corporation','Caterpillar Inc.','Charter Communications, Inc.','Chevron Corporation','China Life Insurance Company Limited','China Mobile Limited','China Petroleum & Chemical Corporation','Cisco Systems, Inc.','Citigroup Inc.','Comcast Corporation','Costco Wholesale Corporation','Danaher Corporation','Diageo plc','Eli Lilly and Company','Exxon Mobil Corporation','Facebook, Inc.','Fidelity National Information Services, Inc.','General Electric Company','Gilead Sciences, Inc.','GlaxoSmithKline plc','HSBC Holdings plc','Honeywell International Inc.','Intel Corporation','International Business Machines Corporation','Itau Unibanco Holding S.A.','JPMorgan Chase & Co.','Johnson & Johnson','Linde plc','Lockheed Martin Corporation','Lowe\'s Companies, Inc.','Mastercard Incorporated','McDonald\'s Corporation','Medtronic plc','Merck & Co., Inc.','Microsoft Corporation','Mondelez International, Inc.','Morgan Stanley','NIKE, Inc.','NVIDIA Corporation','Netflix, Inc.','NextEra Energy, Inc.','Novartis AG','Novo Nordisk A/S','Oracle Corporation','PayPal Holdings, Inc.','PepsiCo, Inc.','PetroChina Company Limited','Petroleo Brasileiro S.A. - Petrobras','Pfizer Inc.','Philip Morris International Inc.','QUALCOMM Incorporated','Rio Tinto Group','Royal Bank of Canada','Royal Dutch Shell plc','SAP SE','Sanofi','Starbucks Corporation','Stryker Corporation','TOTAL S.A.','Taiwan Semiconductor Manufacturing Company Limited','Texas Instruments Incorporated','The Boeing Company','The Coca-Cola Company','The Goldman Sachs Group, Inc.','The Home Depot, Inc.','The Procter & Gamble Company','The Toronto-Dominion Bank','The Unilever Group','The Walt Disney Company','Thermo Fisher Scientific Inc.','Toyota Motor Corporation','U.S. Bancorp','Union Pacific Corporation','United Parcel Service, Inc.','United Technologies Corporation','UnitedHealth Group Incorporated','Verizon Communications Inc.','Visa Inc.','Walmart Inc.','Wells Fargo & Company','iShares Core S&P 500 ETF','salesforce.com, inc.','Basic Materials','Consumer Goods','Financial','Healthcare','Industrial Goods','Services','Technology','Utilities'],
+parents: ['1-5','1-2','1-2','1-1','1-1','1-2','1-2','1-4','1-2','1-0','1-4','1-3','1-3','1-1','1-0','1-0','1-1','1-6','1-6','1-3','1-3','1-4','1-1','1-0','1-2','1-1','1-5','1-4','1-6','1-3','1-2','1-6','1-2','1-3','1-4','1-4','1-5','1-0','1-1','1-6','1-2','1-2','1-5','1-1','1-1','1-3','1-5','1-2','1-2','1-3','1-3','1-1','1-6','1-5','1-4','1-3','1-4','1-1','1-1','1-2','1-0','1-3','1-0','1-2','1-4','1-7','1-1','1-1','1-2','1-3','1-0','1-6','1-6','1-1','1-0','1-2','1-6','1-3','1-6','1-2','1-1','1-4','1-1','1-6','1-2','1-2','1-5','1-0','1-3','1-4','1-0','1-3','1-0','1-4','1-1','1-0','1-3','1-4','1-4','1-5','1-1','1-2','1-3','1-4','1-3','1-3','1-2','','','','','','','',''],
+values: [97256.84, 113493.29, 281246.44, 115832.84, 146093.29, 122888.64, 131355.11, 465205.87, 878380.35, 85913.92, 879050.37, 97030.46, 93296.92, 122944.49, 270591.44, 1125501.79, 125200.5, 118981.48, 133501.55, 289083.96, 520059.8, 87445.2, 90932.45, 80032.86, 115649.13, 85676.94, 78796.35, 103451.09, 224924.81, 109617.24, 169072.9, 83407.0, 200181.45, 166244.22, 206717.91, 131431.96, 97836.92, 93712.85, 109083.93, 290423.39, 540348.71, 79882.16, 79154.61, 80711.5, 110421.03, 154920.79, 123385.04, 251446.79, 120451.74, 84919.42, 404513.2, 340927.96, 106371.9, 105007.61, 86163.75, 276788.13, 145645.4, 142512.19, 210462.41, 1099998.13, 75583.08, 77415.75, 141821.39, 125935.11, 123525.14, 113998.16, 220389.13, 101221.2, 179356.89, 125434.09, 190438.68, 150952.57, 100837.92, 206197.54, 127721.36, 100960.57, 90603.86, 116949.73, 238496.57, 163741.26, 116126.21, 100069.2, 79952.65, 141525.06, 249660.1, 112221.6, 191843.86, 229520.13, 78294.19, 259331.52, 307935.67, 104765.53, 159748.62, 235134.13, 120103.95, 224881.35, 89853.83, 118534.65, 99823.88, 123457.82, 234124.35, 248890.04, 390761.74, 339095.07, 227575.59, 190982.02, 135750.82, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+type: 'sunburst',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_sunburstDiv2, data, layout);            </script>
+</div>
+</div></div>
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Sunburst Chart
+</div>
+<div class="card-body">
+<null>
+<div id='sunburstDiv3' ></div>
+    <script>
+        var target_sunburstDiv3 = document.getElementById('sunburstDiv3');
+        var layout = {
+    height: 200,
+    width: 450,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['0-61','0-8','0-89','0-1','0-2','0-3','0-4','0-13','0-39','0-62','0-7','0-10','0-6','0-5','0-21','0-0','0-11','0-15','0-18','0-14','0-19','0-16','0-17','0-20','0-9','0-30','0-23','0-25','0-31','0-52','0-24','0-86','0-29','0-22','0-26','0-27','0-33','0-32','0-54','0-106','0-35','0-36','0-37','0-38','0-41','0-44','0-43','0-46','0-45','0-47','0-50','0-49','0-53','0-55','0-56','0-57','0-58','0-60','0-63','0-65','0-59','0-64','0-68','0-69','0-67','0-66','0-71','0-70','0-72','0-79','0-74','0-78','0-73','0-75','0-77','0-80','0-82','0-83','0-81','0-84','0-87','0-85','0-88','0-93','0-94','0-95','0-12','0-51','0-40','0-42','0-76','0-90','0-96','0-34','0-92','0-91','0-100','0-98','0-99','0-101','0-97','0-103','0-102','0-105','0-104','0-48','0-28','1-6','1-0','1-3','1-1','1-5','1-4','1-2','1-7'],
+labels: ['3M Company','ASML Holding N.V.','AT&T Inc.','AbbVie Inc.','Abbott Laboratories','Accenture plc','Adobe Inc.','Alibaba Group Holding Limited','Alphabet Inc.','Altria Group, Inc.','Amazon.com, Inc.','American Express Company','American Tower Corporation (REIT)','Amgen Inc.','Anheuser-Busch InBev SA/NV','Apple Inc.','AstraZeneca PLC','BHP Group','BP p.l.c.','Bank of America Corporation','Berkshire Hathaway Inc.','Booking Holdings Inc.','Bristol-Myers Squibb Company','British American Tobacco p.l.c.','Broadcom Inc.','CVS Health Corporation','Caterpillar Inc.','Charter Communications, Inc.','Chevron Corporation','China Life Insurance Company Limited','China Mobile Limited','China Petroleum & Chemical Corporation','Cisco Systems, Inc.','Citigroup Inc.','Comcast Corporation','Costco Wholesale Corporation','Danaher Corporation','Diageo plc','Eli Lilly and Company','Exxon Mobil Corporation','Facebook, Inc.','Fidelity National Information Services, Inc.','General Electric Company','Gilead Sciences, Inc.','GlaxoSmithKline plc','HSBC Holdings plc','Honeywell International Inc.','Intel Corporation','International Business Machines Corporation','Itau Unibanco Holding S.A.','JPMorgan Chase & Co.','Johnson & Johnson','Linde plc','Lockheed Martin Corporation','Lowe\'s Companies, Inc.','Mastercard Incorporated','McDonald\'s Corporation','Medtronic plc','Merck & Co., Inc.','Microsoft Corporation','Mondelez International, Inc.','Morgan Stanley','NIKE, Inc.','NVIDIA Corporation','Netflix, Inc.','NextEra Energy, Inc.','Novartis AG','Novo Nordisk A/S','Oracle Corporation','PayPal Holdings, Inc.','PepsiCo, Inc.','PetroChina Company Limited','Petroleo Brasileiro S.A. - Petrobras','Pfizer Inc.','Philip Morris International Inc.','QUALCOMM Incorporated','Rio Tinto Group','Royal Bank of Canada','Royal Dutch Shell plc','SAP SE','Sanofi','Starbucks Corporation','Stryker Corporation','TOTAL S.A.','Taiwan Semiconductor Manufacturing Company Limited','Texas Instruments Incorporated','The Boeing Company','The Coca-Cola Company','The Goldman Sachs Group, Inc.','The Home Depot, Inc.','The Procter & Gamble Company','The Toronto-Dominion Bank','The Unilever Group','The Walt Disney Company','Thermo Fisher Scientific Inc.','Toyota Motor Corporation','U.S. Bancorp','Union Pacific Corporation','United Parcel Service, Inc.','United Technologies Corporation','UnitedHealth Group Incorporated','Verizon Communications Inc.','Visa Inc.','Walmart Inc.','Wells Fargo & Company','iShares Core S&P 500 ETF','salesforce.com, inc.','Basic Materials','Consumer Goods','Financial','Healthcare','Industrial Goods','Services','Technology','Utilities'],
+parents: ['1-5','1-2','1-2','1-1','1-1','1-2','1-2','1-4','1-2','1-0','1-4','1-3','1-3','1-1','1-0','1-0','1-1','1-6','1-6','1-3','1-3','1-4','1-1','1-0','1-2','1-1','1-5','1-4','1-6','1-3','1-2','1-6','1-2','1-3','1-4','1-4','1-5','1-0','1-1','1-6','1-2','1-2','1-5','1-1','1-1','1-3','1-5','1-2','1-2','1-3','1-3','1-1','1-6','1-5','1-4','1-3','1-4','1-1','1-1','1-2','1-0','1-3','1-0','1-2','1-4','1-7','1-1','1-1','1-2','1-3','1-0','1-6','1-6','1-1','1-0','1-2','1-6','1-3','1-6','1-2','1-1','1-4','1-1','1-6','1-2','1-2','1-5','1-0','1-3','1-4','1-0','1-3','1-0','1-4','1-1','1-0','1-3','1-4','1-4','1-5','1-1','1-2','1-3','1-4','1-3','1-3','1-2','','','','','','','',''],
+values: [97256.84, 113493.29, 281246.44, 115832.84, 146093.29, 122888.64, 131355.11, 465205.87, 878380.35, 85913.92, 879050.37, 97030.46, 93296.92, 122944.49, 270591.44, 1125501.79, 125200.5, 118981.48, 133501.55, 289083.96, 520059.8, 87445.2, 90932.45, 80032.86, 115649.13, 85676.94, 78796.35, 103451.09, 224924.81, 109617.24, 169072.9, 83407.0, 200181.45, 166244.22, 206717.91, 131431.96, 97836.92, 93712.85, 109083.93, 290423.39, 540348.71, 79882.16, 79154.61, 80711.5, 110421.03, 154920.79, 123385.04, 251446.79, 120451.74, 84919.42, 404513.2, 340927.96, 106371.9, 105007.61, 86163.75, 276788.13, 145645.4, 142512.19, 210462.41, 1099998.13, 75583.08, 77415.75, 141821.39, 125935.11, 123525.14, 113998.16, 220389.13, 101221.2, 179356.89, 125434.09, 190438.68, 150952.57, 100837.92, 206197.54, 127721.36, 100960.57, 90603.86, 116949.73, 238496.57, 163741.26, 116126.21, 100069.2, 79952.65, 141525.06, 249660.1, 112221.6, 191843.86, 229520.13, 78294.19, 259331.52, 307935.67, 104765.53, 159748.62, 235134.13, 120103.95, 224881.35, 89853.83, 118534.65, 99823.88, 123457.82, 234124.35, 248890.04, 390761.74, 339095.07, 227575.59, 190982.02, 135750.82, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+type: 'sunburst',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_sunburstDiv3, data, layout);            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-4" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Sunburst Chart
+</div>
+<div class="card-body">
+<null>
+<div id='sunburstDiv4' ></div>
+    <script>
+        var target_sunburstDiv4 = document.getElementById('sunburstDiv4');
+        var layout = {
+    height: 200,
+    width: 300,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['0-61','0-8','0-89','0-1','0-2','0-3','0-4','0-13','0-39','0-62','0-7','0-10','0-6','0-5','0-21','0-0','0-11','0-15','0-18','0-14','0-19','0-16','0-17','0-20','0-9','0-30','0-23','0-25','0-31','0-52','0-24','0-86','0-29','0-22','0-26','0-27','0-33','0-32','0-54','0-106','0-35','0-36','0-37','0-38','0-41','0-44','0-43','0-46','0-45','0-47','0-50','0-49','0-53','0-55','0-56','0-57','0-58','0-60','0-63','0-65','0-59','0-64','0-68','0-69','0-67','0-66','0-71','0-70','0-72','0-79','0-74','0-78','0-73','0-75','0-77','0-80','0-82','0-83','0-81','0-84','0-87','0-85','0-88','0-93','0-94','0-95','0-12','0-51','0-40','0-42','0-76','0-90','0-96','0-34','0-92','0-91','0-100','0-98','0-99','0-101','0-97','0-103','0-102','0-105','0-104','0-48','0-28','1-6','1-0','1-3','1-1','1-5','1-4','1-2','1-7'],
+labels: ['3M Company','ASML Holding N.V.','AT&T Inc.','AbbVie Inc.','Abbott Laboratories','Accenture plc','Adobe Inc.','Alibaba Group Holding Limited','Alphabet Inc.','Altria Group, Inc.','Amazon.com, Inc.','American Express Company','American Tower Corporation (REIT)','Amgen Inc.','Anheuser-Busch InBev SA/NV','Apple Inc.','AstraZeneca PLC','BHP Group','BP p.l.c.','Bank of America Corporation','Berkshire Hathaway Inc.','Booking Holdings Inc.','Bristol-Myers Squibb Company','British American Tobacco p.l.c.','Broadcom Inc.','CVS Health Corporation','Caterpillar Inc.','Charter Communications, Inc.','Chevron Corporation','China Life Insurance Company Limited','China Mobile Limited','China Petroleum & Chemical Corporation','Cisco Systems, Inc.','Citigroup Inc.','Comcast Corporation','Costco Wholesale Corporation','Danaher Corporation','Diageo plc','Eli Lilly and Company','Exxon Mobil Corporation','Facebook, Inc.','Fidelity National Information Services, Inc.','General Electric Company','Gilead Sciences, Inc.','GlaxoSmithKline plc','HSBC Holdings plc','Honeywell International Inc.','Intel Corporation','International Business Machines Corporation','Itau Unibanco Holding S.A.','JPMorgan Chase & Co.','Johnson & Johnson','Linde plc','Lockheed Martin Corporation','Lowe\'s Companies, Inc.','Mastercard Incorporated','McDonald\'s Corporation','Medtronic plc','Merck & Co., Inc.','Microsoft Corporation','Mondelez International, Inc.','Morgan Stanley','NIKE, Inc.','NVIDIA Corporation','Netflix, Inc.','NextEra Energy, Inc.','Novartis AG','Novo Nordisk A/S','Oracle Corporation','PayPal Holdings, Inc.','PepsiCo, Inc.','PetroChina Company Limited','Petroleo Brasileiro S.A. - Petrobras','Pfizer Inc.','Philip Morris International Inc.','QUALCOMM Incorporated','Rio Tinto Group','Royal Bank of Canada','Royal Dutch Shell plc','SAP SE','Sanofi','Starbucks Corporation','Stryker Corporation','TOTAL S.A.','Taiwan Semiconductor Manufacturing Company Limited','Texas Instruments Incorporated','The Boeing Company','The Coca-Cola Company','The Goldman Sachs Group, Inc.','The Home Depot, Inc.','The Procter & Gamble Company','The Toronto-Dominion Bank','The Unilever Group','The Walt Disney Company','Thermo Fisher Scientific Inc.','Toyota Motor Corporation','U.S. Bancorp','Union Pacific Corporation','United Parcel Service, Inc.','United Technologies Corporation','UnitedHealth Group Incorporated','Verizon Communications Inc.','Visa Inc.','Walmart Inc.','Wells Fargo & Company','iShares Core S&P 500 ETF','salesforce.com, inc.','Basic Materials','Consumer Goods','Financial','Healthcare','Industrial Goods','Services','Technology','Utilities'],
+parents: ['1-5','1-2','1-2','1-1','1-1','1-2','1-2','1-4','1-2','1-0','1-4','1-3','1-3','1-1','1-0','1-0','1-1','1-6','1-6','1-3','1-3','1-4','1-1','1-0','1-2','1-1','1-5','1-4','1-6','1-3','1-2','1-6','1-2','1-3','1-4','1-4','1-5','1-0','1-1','1-6','1-2','1-2','1-5','1-1','1-1','1-3','1-5','1-2','1-2','1-3','1-3','1-1','1-6','1-5','1-4','1-3','1-4','1-1','1-1','1-2','1-0','1-3','1-0','1-2','1-4','1-7','1-1','1-1','1-2','1-3','1-0','1-6','1-6','1-1','1-0','1-2','1-6','1-3','1-6','1-2','1-1','1-4','1-1','1-6','1-2','1-2','1-5','1-0','1-3','1-4','1-0','1-3','1-0','1-4','1-1','1-0','1-3','1-4','1-4','1-5','1-1','1-2','1-3','1-4','1-3','1-3','1-2','','','','','','','',''],
+values: [97256.84, 113493.29, 281246.44, 115832.84, 146093.29, 122888.64, 131355.11, 465205.87, 878380.35, 85913.92, 879050.37, 97030.46, 93296.92, 122944.49, 270591.44, 1125501.79, 125200.5, 118981.48, 133501.55, 289083.96, 520059.8, 87445.2, 90932.45, 80032.86, 115649.13, 85676.94, 78796.35, 103451.09, 224924.81, 109617.24, 169072.9, 83407.0, 200181.45, 166244.22, 206717.91, 131431.96, 97836.92, 93712.85, 109083.93, 290423.39, 540348.71, 79882.16, 79154.61, 80711.5, 110421.03, 154920.79, 123385.04, 251446.79, 120451.74, 84919.42, 404513.2, 340927.96, 106371.9, 105007.61, 86163.75, 276788.13, 145645.4, 142512.19, 210462.41, 1099998.13, 75583.08, 77415.75, 141821.39, 125935.11, 123525.14, 113998.16, 220389.13, 101221.2, 179356.89, 125434.09, 190438.68, 150952.57, 100837.92, 206197.54, 127721.36, 100960.57, 90603.86, 116949.73, 238496.57, 163741.26, 116126.21, 100069.2, 79952.65, 141525.06, 249660.1, 112221.6, 191843.86, 229520.13, 78294.19, 259331.52, 307935.67, 104765.53, 159748.62, 235134.13, 120103.95, 224881.35, 89853.83, 118534.65, 99823.88, 123457.82, 234124.35, 248890.04, 390761.74, 339095.07, 227575.59, 190982.02, 135750.82, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+type: 'sunburst',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_sunburstDiv4, data, layout);            </script>
+</div>
+</div></div>
+<div class="col-md-4" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Sunburst Chart
+</div>
+<div class="card-body">
+<null>
+<div id='sunburstDiv5' ></div>
+    <script>
+        var target_sunburstDiv5 = document.getElementById('sunburstDiv5');
+        var layout = {
+    height: 200,
+    width: 300,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['0-61','0-8','0-89','0-1','0-2','0-3','0-4','0-13','0-39','0-62','0-7','0-10','0-6','0-5','0-21','0-0','0-11','0-15','0-18','0-14','0-19','0-16','0-17','0-20','0-9','0-30','0-23','0-25','0-31','0-52','0-24','0-86','0-29','0-22','0-26','0-27','0-33','0-32','0-54','0-106','0-35','0-36','0-37','0-38','0-41','0-44','0-43','0-46','0-45','0-47','0-50','0-49','0-53','0-55','0-56','0-57','0-58','0-60','0-63','0-65','0-59','0-64','0-68','0-69','0-67','0-66','0-71','0-70','0-72','0-79','0-74','0-78','0-73','0-75','0-77','0-80','0-82','0-83','0-81','0-84','0-87','0-85','0-88','0-93','0-94','0-95','0-12','0-51','0-40','0-42','0-76','0-90','0-96','0-34','0-92','0-91','0-100','0-98','0-99','0-101','0-97','0-103','0-102','0-105','0-104','0-48','0-28','1-6','1-0','1-3','1-1','1-5','1-4','1-2','1-7'],
+labels: ['3M Company','ASML Holding N.V.','AT&T Inc.','AbbVie Inc.','Abbott Laboratories','Accenture plc','Adobe Inc.','Alibaba Group Holding Limited','Alphabet Inc.','Altria Group, Inc.','Amazon.com, Inc.','American Express Company','American Tower Corporation (REIT)','Amgen Inc.','Anheuser-Busch InBev SA/NV','Apple Inc.','AstraZeneca PLC','BHP Group','BP p.l.c.','Bank of America Corporation','Berkshire Hathaway Inc.','Booking Holdings Inc.','Bristol-Myers Squibb Company','British American Tobacco p.l.c.','Broadcom Inc.','CVS Health Corporation','Caterpillar Inc.','Charter Communications, Inc.','Chevron Corporation','China Life Insurance Company Limited','China Mobile Limited','China Petroleum & Chemical Corporation','Cisco Systems, Inc.','Citigroup Inc.','Comcast Corporation','Costco Wholesale Corporation','Danaher Corporation','Diageo plc','Eli Lilly and Company','Exxon Mobil Corporation','Facebook, Inc.','Fidelity National Information Services, Inc.','General Electric Company','Gilead Sciences, Inc.','GlaxoSmithKline plc','HSBC Holdings plc','Honeywell International Inc.','Intel Corporation','International Business Machines Corporation','Itau Unibanco Holding S.A.','JPMorgan Chase & Co.','Johnson & Johnson','Linde plc','Lockheed Martin Corporation','Lowe\'s Companies, Inc.','Mastercard Incorporated','McDonald\'s Corporation','Medtronic plc','Merck & Co., Inc.','Microsoft Corporation','Mondelez International, Inc.','Morgan Stanley','NIKE, Inc.','NVIDIA Corporation','Netflix, Inc.','NextEra Energy, Inc.','Novartis AG','Novo Nordisk A/S','Oracle Corporation','PayPal Holdings, Inc.','PepsiCo, Inc.','PetroChina Company Limited','Petroleo Brasileiro S.A. - Petrobras','Pfizer Inc.','Philip Morris International Inc.','QUALCOMM Incorporated','Rio Tinto Group','Royal Bank of Canada','Royal Dutch Shell plc','SAP SE','Sanofi','Starbucks Corporation','Stryker Corporation','TOTAL S.A.','Taiwan Semiconductor Manufacturing Company Limited','Texas Instruments Incorporated','The Boeing Company','The Coca-Cola Company','The Goldman Sachs Group, Inc.','The Home Depot, Inc.','The Procter & Gamble Company','The Toronto-Dominion Bank','The Unilever Group','The Walt Disney Company','Thermo Fisher Scientific Inc.','Toyota Motor Corporation','U.S. Bancorp','Union Pacific Corporation','United Parcel Service, Inc.','United Technologies Corporation','UnitedHealth Group Incorporated','Verizon Communications Inc.','Visa Inc.','Walmart Inc.','Wells Fargo & Company','iShares Core S&P 500 ETF','salesforce.com, inc.','Basic Materials','Consumer Goods','Financial','Healthcare','Industrial Goods','Services','Technology','Utilities'],
+parents: ['1-5','1-2','1-2','1-1','1-1','1-2','1-2','1-4','1-2','1-0','1-4','1-3','1-3','1-1','1-0','1-0','1-1','1-6','1-6','1-3','1-3','1-4','1-1','1-0','1-2','1-1','1-5','1-4','1-6','1-3','1-2','1-6','1-2','1-3','1-4','1-4','1-5','1-0','1-1','1-6','1-2','1-2','1-5','1-1','1-1','1-3','1-5','1-2','1-2','1-3','1-3','1-1','1-6','1-5','1-4','1-3','1-4','1-1','1-1','1-2','1-0','1-3','1-0','1-2','1-4','1-7','1-1','1-1','1-2','1-3','1-0','1-6','1-6','1-1','1-0','1-2','1-6','1-3','1-6','1-2','1-1','1-4','1-1','1-6','1-2','1-2','1-5','1-0','1-3','1-4','1-0','1-3','1-0','1-4','1-1','1-0','1-3','1-4','1-4','1-5','1-1','1-2','1-3','1-4','1-3','1-3','1-2','','','','','','','',''],
+values: [97256.84, 113493.29, 281246.44, 115832.84, 146093.29, 122888.64, 131355.11, 465205.87, 878380.35, 85913.92, 879050.37, 97030.46, 93296.92, 122944.49, 270591.44, 1125501.79, 125200.5, 118981.48, 133501.55, 289083.96, 520059.8, 87445.2, 90932.45, 80032.86, 115649.13, 85676.94, 78796.35, 103451.09, 224924.81, 109617.24, 169072.9, 83407.0, 200181.45, 166244.22, 206717.91, 131431.96, 97836.92, 93712.85, 109083.93, 290423.39, 540348.71, 79882.16, 79154.61, 80711.5, 110421.03, 154920.79, 123385.04, 251446.79, 120451.74, 84919.42, 404513.2, 340927.96, 106371.9, 105007.61, 86163.75, 276788.13, 145645.4, 142512.19, 210462.41, 1099998.13, 75583.08, 77415.75, 141821.39, 125935.11, 123525.14, 113998.16, 220389.13, 101221.2, 179356.89, 125434.09, 190438.68, 150952.57, 100837.92, 206197.54, 127721.36, 100960.57, 90603.86, 116949.73, 238496.57, 163741.26, 116126.21, 100069.2, 79952.65, 141525.06, 249660.1, 112221.6, 191843.86, 229520.13, 78294.19, 259331.52, 307935.67, 104765.53, 159748.62, 235134.13, 120103.95, 224881.35, 89853.83, 118534.65, 99823.88, 123457.82, 234124.35, 248890.04, 390761.74, 339095.07, 227575.59, 190982.02, 135750.82, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+type: 'sunburst',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_sunburstDiv5, data, layout);            </script>
+</div>
+</div></div>
+<div class="col-md-4" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Sunburst Chart
+</div>
+<div class="card-body">
+<null>
+<div id='sunburstDiv6' ></div>
+    <script>
+        var target_sunburstDiv6 = document.getElementById('sunburstDiv6');
+        var layout = {
+    height: 200,
+    width: 300,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['0-61','0-8','0-89','0-1','0-2','0-3','0-4','0-13','0-39','0-62','0-7','0-10','0-6','0-5','0-21','0-0','0-11','0-15','0-18','0-14','0-19','0-16','0-17','0-20','0-9','0-30','0-23','0-25','0-31','0-52','0-24','0-86','0-29','0-22','0-26','0-27','0-33','0-32','0-54','0-106','0-35','0-36','0-37','0-38','0-41','0-44','0-43','0-46','0-45','0-47','0-50','0-49','0-53','0-55','0-56','0-57','0-58','0-60','0-63','0-65','0-59','0-64','0-68','0-69','0-67','0-66','0-71','0-70','0-72','0-79','0-74','0-78','0-73','0-75','0-77','0-80','0-82','0-83','0-81','0-84','0-87','0-85','0-88','0-93','0-94','0-95','0-12','0-51','0-40','0-42','0-76','0-90','0-96','0-34','0-92','0-91','0-100','0-98','0-99','0-101','0-97','0-103','0-102','0-105','0-104','0-48','0-28','1-6','1-0','1-3','1-1','1-5','1-4','1-2','1-7'],
+labels: ['3M Company','ASML Holding N.V.','AT&T Inc.','AbbVie Inc.','Abbott Laboratories','Accenture plc','Adobe Inc.','Alibaba Group Holding Limited','Alphabet Inc.','Altria Group, Inc.','Amazon.com, Inc.','American Express Company','American Tower Corporation (REIT)','Amgen Inc.','Anheuser-Busch InBev SA/NV','Apple Inc.','AstraZeneca PLC','BHP Group','BP p.l.c.','Bank of America Corporation','Berkshire Hathaway Inc.','Booking Holdings Inc.','Bristol-Myers Squibb Company','British American Tobacco p.l.c.','Broadcom Inc.','CVS Health Corporation','Caterpillar Inc.','Charter Communications, Inc.','Chevron Corporation','China Life Insurance Company Limited','China Mobile Limited','China Petroleum & Chemical Corporation','Cisco Systems, Inc.','Citigroup Inc.','Comcast Corporation','Costco Wholesale Corporation','Danaher Corporation','Diageo plc','Eli Lilly and Company','Exxon Mobil Corporation','Facebook, Inc.','Fidelity National Information Services, Inc.','General Electric Company','Gilead Sciences, Inc.','GlaxoSmithKline plc','HSBC Holdings plc','Honeywell International Inc.','Intel Corporation','International Business Machines Corporation','Itau Unibanco Holding S.A.','JPMorgan Chase & Co.','Johnson & Johnson','Linde plc','Lockheed Martin Corporation','Lowe\'s Companies, Inc.','Mastercard Incorporated','McDonald\'s Corporation','Medtronic plc','Merck & Co., Inc.','Microsoft Corporation','Mondelez International, Inc.','Morgan Stanley','NIKE, Inc.','NVIDIA Corporation','Netflix, Inc.','NextEra Energy, Inc.','Novartis AG','Novo Nordisk A/S','Oracle Corporation','PayPal Holdings, Inc.','PepsiCo, Inc.','PetroChina Company Limited','Petroleo Brasileiro S.A. - Petrobras','Pfizer Inc.','Philip Morris International Inc.','QUALCOMM Incorporated','Rio Tinto Group','Royal Bank of Canada','Royal Dutch Shell plc','SAP SE','Sanofi','Starbucks Corporation','Stryker Corporation','TOTAL S.A.','Taiwan Semiconductor Manufacturing Company Limited','Texas Instruments Incorporated','The Boeing Company','The Coca-Cola Company','The Goldman Sachs Group, Inc.','The Home Depot, Inc.','The Procter & Gamble Company','The Toronto-Dominion Bank','The Unilever Group','The Walt Disney Company','Thermo Fisher Scientific Inc.','Toyota Motor Corporation','U.S. Bancorp','Union Pacific Corporation','United Parcel Service, Inc.','United Technologies Corporation','UnitedHealth Group Incorporated','Verizon Communications Inc.','Visa Inc.','Walmart Inc.','Wells Fargo & Company','iShares Core S&P 500 ETF','salesforce.com, inc.','Basic Materials','Consumer Goods','Financial','Healthcare','Industrial Goods','Services','Technology','Utilities'],
+parents: ['1-5','1-2','1-2','1-1','1-1','1-2','1-2','1-4','1-2','1-0','1-4','1-3','1-3','1-1','1-0','1-0','1-1','1-6','1-6','1-3','1-3','1-4','1-1','1-0','1-2','1-1','1-5','1-4','1-6','1-3','1-2','1-6','1-2','1-3','1-4','1-4','1-5','1-0','1-1','1-6','1-2','1-2','1-5','1-1','1-1','1-3','1-5','1-2','1-2','1-3','1-3','1-1','1-6','1-5','1-4','1-3','1-4','1-1','1-1','1-2','1-0','1-3','1-0','1-2','1-4','1-7','1-1','1-1','1-2','1-3','1-0','1-6','1-6','1-1','1-0','1-2','1-6','1-3','1-6','1-2','1-1','1-4','1-1','1-6','1-2','1-2','1-5','1-0','1-3','1-4','1-0','1-3','1-0','1-4','1-1','1-0','1-3','1-4','1-4','1-5','1-1','1-2','1-3','1-4','1-3','1-3','1-2','','','','','','','',''],
+values: [97256.84, 113493.29, 281246.44, 115832.84, 146093.29, 122888.64, 131355.11, 465205.87, 878380.35, 85913.92, 879050.37, 97030.46, 93296.92, 122944.49, 270591.44, 1125501.79, 125200.5, 118981.48, 133501.55, 289083.96, 520059.8, 87445.2, 90932.45, 80032.86, 115649.13, 85676.94, 78796.35, 103451.09, 224924.81, 109617.24, 169072.9, 83407.0, 200181.45, 166244.22, 206717.91, 131431.96, 97836.92, 93712.85, 109083.93, 290423.39, 540348.71, 79882.16, 79154.61, 80711.5, 110421.03, 154920.79, 123385.04, 251446.79, 120451.74, 84919.42, 404513.2, 340927.96, 106371.9, 105007.61, 86163.75, 276788.13, 145645.4, 142512.19, 210462.41, 1099998.13, 75583.08, 77415.75, 141821.39, 125935.11, 123525.14, 113998.16, 220389.13, 101221.2, 179356.89, 125434.09, 190438.68, 150952.57, 100837.92, 206197.54, 127721.36, 100960.57, 90603.86, 116949.73, 238496.57, 163741.26, 116126.21, 100069.2, 79952.65, 141525.06, 249660.1, 112221.6, 191843.86, 229520.13, 78294.19, 259331.52, 307935.67, 104765.53, 159748.62, 235134.13, 120103.95, 224881.35, 89853.83, 118534.65, 99823.88, 123457.82, 234124.35, 248890.04, 390761.74, 339095.07, 227575.59, 190982.02, 135750.82, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+type: 'sunburst',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_sunburstDiv6, data, layout);            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<br>
+</div>
+</div>
+</div>
+
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4567/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../../bootstrap-4.1/js/bootstrap.bundle.min.js"></script>
+<script src="../../bootstrap-4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

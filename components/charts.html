@@ -1,0 +1,809 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<!-- Bootstrap core CSS -->
+<link href="../bootstrap-4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<!-- Custom styles -->
+<link href="../application/demo-custom.css" rel="stylesheet">
+</head>
+<body>
+<!-- Plotly JavaScript
+================================================== -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand" href="../index.html">WebApp Demo</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+<li class="nav-item">
+  <a class="nav-link
+ active"
+ href="bootstrap.html"
+ >Components</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="../about/project.html"
+ >About</a>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<form class="form-inline my-2 my-md-0" action="http://localhost:4567/search">
+<input class="form-control" type="text" placeholder="Search...">
+</form>
+</ul>
+</div>
+</div>
+</nav>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<null>
+<br><ul class="nav nav-tabs">
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="bootstrap.html"
+ >Bootstrap</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="tables.html"
+ >Tables</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+ active"
+ href="charts.html"
+ >Charts</a>
+</li>
+</ul>
+<null>
+<div style="margin:6px;">
+<div class="btn-toolbar" role="toolbar">
+<div class="btn-group mr-2" role="group">
+<a href="charts.html" class="btn btn-secondary btn-sm active" style="color: black;background-color: #d9d9d9;border-color: #cccccc;">
+All</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/vbar.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+VBar</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/hbar.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+HBar</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/line.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Line</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/area.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Area</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/pie.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Pie</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/timeseries.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Timeseries</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/scatter.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Scatter</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/bubble.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Bubble</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/histogram.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Histogram</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/heatmap.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Heatmap</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/candlestick.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Candlestick</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/ohlc.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+OHLC</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/treemap.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Treemap</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="charts/sunburst.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Sunburst</a>
+</div>
+</div>
+</div>
+<div style="border-bottom:1px solid #dee2e6;">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<null>
+<br>
+<null>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Vertical Bar Chart
+</div>
+<div class="card-body">
+<null>
+<div id='vbarDiv' ></div>
+    <script>
+        var target_vbarDiv = document.getElementById('vbarDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+
+
+};
+
+var trace0 =
+{
+x: ['Australia','Spain','Canada','UK','France','India','Germany','Japan','China','US'],
+y: [1.376, 1.583, 1.82, 2.829, 2.845, 2.972, 4.117, 5.176, 14.216, 20.58],
+orientation: 'v',
+xaxis: 'x',
+yaxis: 'y',
+type: 'bar',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_vbarDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Horizontal Bar Chart
+</div>
+<div class="card-body">
+<null>
+<div id='hbarDiv' ></div>
+    <script>
+        var target_hbarDiv = document.getElementById('hbarDiv');
+        var layout = {
+    height: 200,
+    width: 500,
+    showlegend: false,
+    margin: {
+    t: 5,
+    b: 30,
+    l: 55,
+    r: 5,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+var trace0 =
+{
+x: [1.376, 1.583, 1.82, 2.829, 2.845, 2.972, 4.117, 5.176, 14.216, 20.58],
+y: ['Australia','Spain','Canada','UK','France','India','Germany','Japan','China','US'],
+orientation: 'h',
+xaxis: 'x',
+yaxis: 'y',
+type: 'bar',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_hbarDiv, data, layout);            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Line Chart
+</div>
+<div class="card-body">
+<null>
+<div id='lineDiv' ></div>
+    <script>
+        var target_lineDiv = document.getElementById('lineDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+    xaxis: {
+    title: 'Country',
+    },
+
+    yaxis: {
+    title: 'GDP',
+    },
+
+};
+
+var trace0 =
+{
+x: ['0.0','1.0','2.0','3.0','4.0','5.0','6.0','7.0','8.0','9.0'],
+y: ['1.376','1.583','1.82','2.829','2.845','2.972','4.117','5.176','14.216','20.58'],
+mode: 'lines',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_lineDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Area Chart
+</div>
+<div class="card-body">
+<null>
+<div id='areaDiv' ></div>
+    <script>
+        var target_areaDiv = document.getElementById('areaDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+    xaxis: {
+    title: 'Country',
+    },
+
+    yaxis: {
+    title: 'GDP',
+    },
+
+};
+
+var trace0 =
+{
+x: ['0.0','1.0','2.0','3.0','4.0','5.0','6.0','7.0','8.0','9.0'],
+y: ['1.376','1.583','1.82','2.829','2.845','2.972','4.117','5.176','14.216','20.58'],
+mode: 'lines',
+fill: 'tonexty',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_areaDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Pie Chart
+</div>
+<div class="card-body">
+<null>
+<div id='pieDiv' ></div>
+    <script>
+        var target_pieDiv = document.getElementById('pieDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+
+
+};
+
+var trace0 =
+    {
+        labels: ['Australia','Spain','Canada','UK','France','India','Germany','Japan','China','US'],
+        values: [1.376, 1.583, 1.82, 2.829, 2.845, 2.972, 4.117, 5.176, 14.216, 20.58],
+        type: 'pie',
+        name: '',
+ }
+
+        var data = [ trace0];
+Plotly.newPlot(target_pieDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Timeseries Chart
+</div>
+<div class="card-body">
+<null>
+<div id='timeseriesDiv' ></div>
+    <script>
+        var target_timeseriesDiv = document.getElementById('timeseriesDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+    xaxis: {
+    title: 'Date',
+    },
+
+    yaxis: {
+    title: 'Close',
+    },
+
+};
+
+var trace0 =
+{
+x: ['2019-05-01','2019-05-02','2019-05-03','2019-05-04','2019-05-05','2019-05-06','2019-05-07','2019-05-08','2019-05-09','2019-05-10','2019-05-11','2019-05-12'],
+y: ['119.0','112.0','103.0','114.0','130.0','141.0','145.0','165.0','154.0','130.0','130.0','144.0'],
+mode: 'lines',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_timeseriesDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Scatter Chart
+</div>
+<div class="card-body">
+<null>
+<div id='scatterDiv' ></div>
+    <script>
+        var target_scatterDiv = document.getElementById('scatterDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+    xaxis: {
+    title: 'Population',
+    },
+
+    yaxis: {
+    title: 'GDP',
+    },
+
+};
+
+var trace0 =
+{
+x: ['2.55468E7','4.6733038E7','3.7602103E7','6.7545757E7','6.7022E7','1.324171354E9','8.30192E7','1.26317E8','1.403500365E9','3.27167434E8'],
+y: ['1.376','1.583','1.82','2.829','2.845','2.972','4.117','5.176','14.216','20.58'],
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_scatterDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Bubble Chart
+</div>
+<div class="card-body">
+<null>
+<div id='bubbleDiv' ></div>
+    <script>
+        var target_bubbleDiv = document.getElementById('bubbleDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+    xaxis: {
+    title: 'Population',
+    },
+
+    yaxis: {
+    title: 'GDP',
+    },
+
+};
+
+var trace0 =
+{
+x: ['2.55468E7','4.6733038E7','3.7602103E7','6.7545757E7','6.7022E7','1.324171354E9','8.30192E7','1.26317E8','1.403500365E9','3.27167434E8'],
+y: ['1.376','1.583','1.82','2.829','2.845','2.972','4.117','5.176','14.216','20.58'],
+marker: {
+    size: [53825.0, 34281.0, 48601.0, 42580.0, 43500.0, 2199.0, 49692.0, 41021.0, 10153.0, 62869.0],
+},
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'scatter',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_bubbleDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Histogram Chart
+</div>
+<div class="card-body">
+<null>
+<div id='histogramDiv' ></div>
+    <script>
+        var target_histogramDiv = document.getElementById('histogramDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+
+
+};
+
+var trace0 =
+{
+x: [2.55468E7, 4.6733038E7, 3.7602103E7, 6.7545757E7, 6.7022E7, 1.324171354E9, 8.30192E7, 1.26317E8, 1.403500365E9, 3.27167434E8],
+opacity: '1.0',
+nbinsx: 0,
+autobinx: false,
+nbinsy: 0,
+autobiny: false,
+xaxis: 'x',
+yaxis: 'y',
+type: 'histogram',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_histogramDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Heatmap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='heatmapDiv' ></div>
+    <script>
+        var target_heatmapDiv = document.getElementById('heatmapDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+
+
+};
+
+var trace0 =
+{
+x: ['Healthcare','Services','Technology'],
+y: ['AECOM','Abiomed, Inc.','Applied Therapeutics, Inc.','DocuSign, Inc.','Dropbox, Inc.','Facebook, Inc.','Square, Inc','salesforce.com, inc.'],
+z: [[0.0,1.0,0.0,],[1.0,0.0,0.0,],[1.0,0.0,0.0,],[0.0,0.0,1.0,],[0.0,0.0,1.0,],[0.0,0.0,1.0,],[0.0,0.0,1.0,],[0.0,0.0,1.0,],],
+xaxis: 'x',
+yaxis: 'y',
+type: 'heatmap',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_heatmapDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Candlestick Chart
+</div>
+<div class="card-body">
+<null>
+<div id='candlestickDiv' ></div>
+    <script>
+        var target_candlestickDiv = document.getElementById('candlestickDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+    xaxis: {
+    title: 'Date',
+    },
+
+
+};
+
+var trace0 =
+{
+x: ['2019-05-01','2019-05-02','2019-05-03','2019-05-04','2019-05-05','2019-05-06','2019-05-07','2019-05-08','2019-05-09','2019-05-10','2019-05-11','2019-05-12'],
+open: [120.0, 119.0, 112.0, 103.0, 114.0, 130.0, 141.0, 145.0, 165.0, 154.0, 130.0, 130.0],
+high: [121.0, 119.0, 112.0, 115.0, 131.0, 142.0, 147.0, 165.0, 165.0, 154.0, 130.0, 145.0],
+low: [118.0, 110.0, 103.0, 103.0, 112.0, 129.0, 137.0, 143.0, 153.0, 130.0, 128.0, 129.0],
+close: [119.0, 112.0, 103.0, 114.0, 130.0, 141.0, 145.0, 165.0, 154.0, 130.0, 130.0, 144.0],
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'candlestick',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_candlestickDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+OHLC Chart
+</div>
+<div class="card-body">
+<null>
+<div id='ohlcDiv' ></div>
+    <script>
+        var target_ohlcDiv = document.getElementById('ohlcDiv');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+    xaxis: {
+    title: 'Date',
+    },
+
+
+};
+
+var trace0 =
+{
+x: ['2019-05-01','2019-05-02','2019-05-03','2019-05-04','2019-05-05','2019-05-06','2019-05-07','2019-05-08','2019-05-09','2019-05-10','2019-05-11','2019-05-12'],
+open: [120.0, 119.0, 112.0, 103.0, 114.0, 130.0, 141.0, 145.0, 165.0, 154.0, 130.0, 130.0],
+high: [121.0, 119.0, 112.0, 115.0, 131.0, 142.0, 147.0, 165.0, 165.0, 154.0, 130.0, 145.0],
+low: [118.0, 110.0, 103.0, 103.0, 112.0, 129.0, 137.0, 143.0, 153.0, 130.0, 128.0, 129.0],
+close: [119.0, 112.0, 103.0, 114.0, 130.0, 141.0, 145.0, 165.0, 154.0, 130.0, 130.0, 144.0],
+mode: 'markers',
+xaxis: 'x',
+yaxis: 'y',
+type: 'ohlc',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_ohlcDiv, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Treemap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='treemapDiv' ></div>
+    <script>
+        var target_treemapDiv = document.getElementById('treemapDiv');
+        var layout = {
+    height: 200,
+    width: 500,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['0-1','0-2','0-0','0-4','0-3','0-7','0-5','0-6','1-0','1-1','1-2'],
+labels: ['AECOM','Abiomed, Inc.','Applied Therapeutics, Inc.','DocuSign, Inc.','Dropbox, Inc.','Facebook, Inc.','Square, Inc','salesforce.com, inc.','Healthcare','Services','Technology'],
+parents: ['1-1','1-0','1-0','1-2','1-2','1-2','1-2','1-2','','',''],
+type: 'treemap',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_treemapDiv, data, layout);            </script>
+</div>
+</div></div>
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Sunburst Chart
+</div>
+<div class="card-body">
+<null>
+<div id='sunburstDiv' ></div>
+    <script>
+        var target_sunburstDiv = document.getElementById('sunburstDiv');
+        var layout = {
+    height: 200,
+    width: 500,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['0-1','0-2','0-0','0-4','0-3','0-7','0-5','0-6','1-0','1-1','1-2'],
+labels: ['AECOM','Abiomed, Inc.','Applied Therapeutics, Inc.','DocuSign, Inc.','Dropbox, Inc.','Facebook, Inc.','Square, Inc','salesforce.com, inc.','Healthcare','Services','Technology'],
+parents: ['1-1','1-0','1-0','1-2','1-2','1-2','1-2','1-2','','',''],
+values: [6.41, 8.22, 0.25226, 11.81, 8.31, 544.72, 27.65, 131.78, 0.0, 0.0, 0.0],
+type: 'sunburst',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_sunburstDiv, data, layout);            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<br>
+</div>
+</div>
+</div>
+
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4567/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../bootstrap-4.1/js/bootstrap.bundle.min.js"></script>
+<script src="../bootstrap-4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

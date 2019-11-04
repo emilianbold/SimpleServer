@@ -1,0 +1,466 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<!-- Bootstrap core CSS -->
+<link href="../../bootstrap-4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<!-- Custom styles -->
+<link href="../../application/demo-custom.css" rel="stylesheet">
+</head>
+<body>
+<!-- Plotly JavaScript
+================================================== -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand" href="../../index.html">WebApp Demo</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+<li class="nav-item">
+  <a class="nav-link
+ active"
+ href="../bootstrap.html"
+ >Components</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="../../about/project.html"
+ >About</a>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<form class="form-inline my-2 my-md-0" action="http://localhost:4567/search">
+<input class="form-control" type="text" placeholder="Search...">
+</form>
+</ul>
+</div>
+</div>
+</nav>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<null>
+<br><ul class="nav nav-tabs">
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="../bootstrap.html"
+ >Bootstrap</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="../tables.html"
+ >Tables</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+ active"
+ href="../charts.html"
+ >Charts</a>
+</li>
+</ul>
+<null>
+<div style="margin:6px;">
+<div class="btn-toolbar" role="toolbar">
+<div class="btn-group mr-2" role="group">
+<a href="../charts.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+All</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="vbar.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+VBar</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="hbar.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+HBar</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="line.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Line</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="area.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Area</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="pie.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Pie</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="timeseries.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Timeseries</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="scatter.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Scatter</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="bubble.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Bubble</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="histogram.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Histogram</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="heatmap.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Heatmap</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="candlestick.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Candlestick</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="ohlc.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+OHLC</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="treemap.html" class="btn btn-secondary btn-sm active" style="color: black;background-color: #d9d9d9;border-color: #cccccc;">
+Treemap</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="sunburst.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Sunburst</a>
+</div>
+</div>
+</div>
+<div style="border-bottom:1px solid #dee2e6;">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<null>
+<br>
+<null>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Treemap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='treemapDiv1' ></div>
+    <script>
+        var target_treemapDiv1 = document.getElementById('treemapDiv1');
+        var layout = {
+    height: 500,
+    width: 1043,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+marker: {
+    size: 6.0,
+    colors: ['0.01','0.0235','0.0124','-0.0011','0.0014000000000000002','0.0097','-0.0273','0.0089','0.0095','0.006','0.0027','0.0017000000000000001','0.0031','0.025099999999999997','0.0038','0.018600000000000002','0.013600000000000001','5.0E-4','0.0111','-0.0028000000000000004','0.0049','0.005','0.0023','-0.0104','0.005699999999999999','0.0024','0.0040999999999999995','0.0106','-0.0046','0.008199999999999999','0.0286','0.0058','0.012','-0.0016','-0.0059','0.0025','-0.0028000000000000004','0.008','0.006999999999999999','0.0078000000000000005','0.006500000000000001','0.0197','0.0195','0.016399999999999998','0.0132','0.0103','0.0060999999999999995','-0.0362','0.0039000000000000003','0.0053','0.019799999999999998','0.005600000000000001','0.006500000000000001','0.0038','-0.0033','0.011200000000000002','0.0091','0.0253','0.003','5.0E-4','0.0212','-0.014499999999999999','-0.0068000000000000005','0.0074','0.0179','-0.0173','-7.000000000000001E-4','0.0101','0.0246','-0.0154','0.0182','-8.0E-4','0.011000000000000001','0.0042','-0.0045000000000000005','0.0087','0.0095','0.0123','-5.0E-4','0.0139','0.0019','0.0013','0.0077','-0.0055000000000000005','0.0359','0.004','0.0038','0.0148','-6.0E-4','0.0068000000000000005','0.0026','0.0086','9.0E-4','0.009899999999999999','0.042800000000000005','2.0E-4','4.0E-4','0.0109','0.0021','0.0034999999999999996','-0.0042','-0.0066','-0.008','0.0087','-0.0092','0.0046','0.0049','6.0E-4','0.011200000000000002','-0.0031','0.0016','0.0015','-0.0088','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0'],
+    colorscale: [
+        ['0.0', 'rgb(255,0,0)'],
+        ['1.0', 'rgb(0,255,0)']
+    ],
+    colorbar: {
+    tickmode: 'linear',
+    tickcolors: '#444',
+    ticklen: 5,
+    tickwidth: 1,
+    showticklabels: true,
+    dtick: '1',
+    tick0: '0',
+}
+,
+    cmax: 0.0,
+    cmin: 0.0,
+},
+text: ['1.00%','2.35%','1.24%','-0.11%','0.14%','0.97%','-2.73%','0.89%','0.95%','0.60%','0.27%','0.17%','0.31%','2.51%','0.38%','1.86%','1.36%','0.05%','1.11%','-0.28%','0.49%','0.50%','0.23%','-1.04%','0.57%','0.24%','0.41%','1.06%','-0.46%','0.82%','2.86%','0.58%','1.20%','-0.16%','-0.59%','0.25%','-0.28%','0.80%','0.70%','0.78%','0.65%','1.97%','1.95%','1.64%','1.32%','1.03%','0.61%','-3.62%','0.39%','0.53%','1.98%','0.56%','0.65%','0.38%','-0.33%','1.12%','0.91%','2.53%','0.30%','0.05%','2.12%','-1.45%','-0.68%','0.74%','1.79%','-1.73%','-0.07%','1.01%','2.46%','-1.54%','1.82%','-0.08%','1.10%','0.42%','-0.45%','0.87%','0.95%','1.23%','-0.05%','1.39%','0.19%','0.13%','0.77%','-0.55%','3.59%','0.40%','0.38%','1.48%','-0.06%','0.68%','0.26%','0.86%','0.09%','0.99%','4.28%','0.02%','0.04%','1.09%','0.21%','0.35%','-0.42%','-0.66%','-0.80%','0.87%','-0.92%','0.46%','0.49%','0.06%','1.12%','-0.31%','0.16%','0.15%','-0.88%','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''],
+ids: ['0-0','0-1','0-2','0-3','0-4','0-5','0-6','0-7','0-8','0-9','0-10','0-11','0-12','0-13','0-14','0-15','0-16','0-17','0-18','0-19','0-20','0-21','0-22','0-23','0-24','0-25','0-26','0-27','0-28','0-29','0-30','0-31','0-32','0-33','0-34','0-35','0-36','0-37','0-38','0-39','0-40','0-41','0-42','0-43','0-44','0-45','0-46','0-47','0-48','0-49','0-50','0-51','0-52','0-53','0-54','0-55','0-56','0-57','0-58','0-59','0-60','0-61','0-62','0-63','0-64','0-65','0-66','0-67','0-68','0-69','0-70','0-71','0-72','0-73','0-74','0-75','0-76','0-77','0-78','0-79','0-80','0-81','0-82','0-83','0-84','0-85','0-86','0-87','0-88','0-89','0-90','0-91','0-92','0-93','0-94','0-95','0-96','0-97','0-98','0-99','0-100','0-101','0-102','0-103','0-104','0-105','0-106','0-107','0-108','0-109','0-110','0-111','0-112','1-10','1-52','1-4','1-48','1-18','1-34','1-26','1-43','1-14','1-39','1-21','1-6','1-17','1-24','1-38','1-9','1-23','1-27','1-1','1-40','1-0','1-22','1-33','1-19','1-31','1-32','1-25','1-30','1-13','1-3','1-28','1-29','1-35','1-15','1-2','1-49','1-12','1-44','1-45','1-16','1-5','1-51','1-53','1-37','1-8','1-50','1-42','1-7','1-36','1-46','1-11','1-47','1-41','1-20','2-6','2-0','2-3','2-1','2-5','2-4','2-2','2-7'],
+labels: ['AAPL','ABBV','ABT','ACN','ADBE','AMGN','AMT','AMZN','ASML','AVGO','AXP','AZN','BA','BABA','BAC','BBL','BHP','BKNG','BMY','BP','BRK-A','BRK-B','BTI','BUD','C','CAT','CHL','CHTR','CMCSA','COST','CRM','CSCO','CVS','CVX','DEO','DHR','DIS','FB','FIS','GE','GILD','GOOG','GOOGL','GS','GSK','HD','HON','HSBC','IBM','INTC','ITUB','IVV','JNJ','JPM','KO','LFC','LIN','LLY','LMT','LOW','MA','MCD','MDLZ','MDT','MMM','MO','MRK','MS','MSFT','NEE','NFLX','NKE','NVDA','NVO','NVS','ORCL','PBR','PBR-A','PEP','PFE','PG','PM','PTR','PYPL','QCOM','RDS-A','RDS-B','RIO','RY','SAP','SBUX','SNP','SNY','SYK','T','TD','TM','TMO','TOT','TSM','TXN','UL','UN','UNH','UNP','UPS','USB','UTX','V','VZ','WFC','WMT','XOM','Aerospace/Defense Products & Services','Air Delivery & Freight Services','Application Software','Auto Manufacturers - Major','Beverages - Brewers','Beverages - Soft Drinks','Beverages - Wineries & Distillers','Biotechnology','Business Services','Business Software & Services','CATV Systems','Catalog & Mail Order Houses','Cigarettes','Communication Equipment','Confectioners','Credit Services','Discount, Variety Stores','Diversified Machinery','Drug Manufacturers - Major','Electric Utilities','Electronic Equipment','Entertainment - Diversified','Exchange Traded Fund','Farm & Construction Machinery','Foreign Money Center Banks','Foreign Regional Banks','Health Care Plans','Home Improvement Stores','Industrial Metals & Minerals','Information Technology Services','Internet Information Providers','Investment Brokerage - National','Life Insurance','Major Integrated Oil & Gas','Medical Appliances & Equipment','Medical Laboratories & Research','Money Center Banks','Oil & Gas Drilling & Exploration','Personal Products','Property & Casualty Insurance','REIT - Diversified','Railroads','Regional - Midwest Banks','Restaurants','Semiconductor - Broad Line','Semiconductor - Integrated Circuits','Semiconductor - Specialized','Semiconductor Equipment & Materials','Specialty Chemicals','Specialty Eateries','Specialty Retail, Other','Telecom Services - Domestic','Textile - Apparel Footwear & Accessories','Wireless Communications','Basic Materials','Consumer Goods','Financial','Healthcare','Industrial Goods','Services','Technology','Utilities'],
+parents: ['1-0','1-1','1-2','1-3','1-4','1-1','1-5','1-6','1-7','1-8','1-9','1-1','1-10','1-11','1-12','1-13','1-13','1-14','1-1','1-15','1-16','1-16','1-17','1-18','1-12','1-19','1-20','1-21','1-22','1-23','1-4','1-24','1-25','1-15','1-26','1-27','1-22','1-28','1-3','1-27','1-1','1-28','1-28','1-29','1-1','1-30','1-27','1-31','1-3','1-8','1-32','1-33','1-1','1-12','1-34','1-35','1-36','1-1','1-10','1-30','1-9','1-37','1-38','1-2','1-27','1-17','1-1','1-29','1-39','1-40','1-21','1-41','1-42','1-43','1-1','1-4','1-44','1-44','1-34','1-1','1-45','1-17','1-15','1-9','1-24','1-15','1-15','1-13','1-12','1-4','1-46','1-15','1-1','1-2','1-47','1-12','1-48','1-49','1-15','1-50','1-8','1-45','1-45','1-25','1-51','1-52','1-53','1-10','1-9','1-47','1-12','1-23','1-15','2-5','2-4','2-2','2-0','2-0','2-0','2-0','2-1','2-4','2-2','2-4','2-4','2-0','2-2','2-0','2-3','2-4','2-5','2-1','2-7','2-0','2-4','2-3','2-5','2-3','2-3','2-1','2-4','2-6','2-2','2-2','2-3','2-3','2-6','2-1','2-1','2-3','2-6','2-0','2-3','2-3','2-4','2-3','2-4','2-2','2-2','2-2','2-2','2-6','2-4','2-4','2-2','2-0','2-2','','','','','','','',''],
+values: ['1125501.79','115832.84','146093.29','122888.64','131355.11','122944.49','93296.92','879050.37','113493.29','115649.13','97030.46','125200.5','191843.86','465205.87','289083.96','118981.48','118399.45','87445.2','90932.45','133501.55','520059.8','525119.24','80032.86','270591.44','166244.22','78796.35','169072.9','103451.09','206717.91','131431.96','135750.82','200181.45','85676.94','224924.81','93712.85','97836.92','235134.13','540348.71','79882.16','79154.61','80711.5','878380.35','894075.18','78294.19','110421.03','259331.52','123385.04','154920.79','120451.74','251446.79','84919.42','190982.02','340927.96','404513.2','229520.13','109617.24','106371.9','109083.93','105007.61','86163.75','276788.13','145645.4','75583.08','142512.19','97256.84','85913.92','210462.41','77415.75','1099998.13','113998.16','123525.14','141821.39','125935.11','101221.2','220389.13','179356.89','100837.92','96333.62','190438.68','206197.54','307935.67','127721.36','150952.57','125434.09','100960.57','238496.57','243392.38','90603.86','116949.73','163741.26','100069.2','83407.0','116126.21','79952.65','281246.44','104765.53','224881.35','120103.95','141525.06','249660.1','112221.6','159748.62','159517.26','234124.35','118534.65','99823.88','89853.83','123457.82','390761.74','248890.04','227575.59','339095.07','290423.39','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0','0.0'],
+type: 'treemap',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_treemapDiv1, data, layout);            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Treemap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='treemapDiv2' ></div>
+    <script>
+        var target_treemapDiv2 = document.getElementById('treemapDiv2');
+        var layout = {
+    height: 200,
+    width: 486,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['f-1','f-6','f-4','f-0','f-3','f-2','f-5'],
+labels: ['386BSD','Darwin','DragonFly BSD','FreeBSD','NetBSD','OpenBSD','macOS'],
+parents: ['','f-0','f-0','f-1','f-1','f-3','f-6'],
+type: 'treemap',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_treemapDiv2, data, layout);            </script>
+</div>
+</div></div>
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Treemap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='treemapDiv3' ></div>
+    <script>
+        var target_treemapDiv3 = document.getElementById('treemapDiv3');
+        var layout = {
+    height: 200,
+    width: 486,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['f-1','f-6','f-4','f-0','f-3','f-2','f-5'],
+labels: ['386BSD','Darwin','DragonFly BSD','FreeBSD','NetBSD','OpenBSD','macOS'],
+parents: ['','f-0','f-0','f-1','f-1','f-3','f-6'],
+type: 'treemap',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_treemapDiv3, data, layout);            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-4" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Treemap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='treemapDiv4' ></div>
+    <script>
+        var target_treemapDiv4 = document.getElementById('treemapDiv4');
+        var layout = {
+    height: 200,
+    width: 300,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['f-1','f-6','f-4','f-0','f-3','f-2','f-5'],
+labels: ['386BSD','Darwin','DragonFly BSD','FreeBSD','NetBSD','OpenBSD','macOS'],
+parents: ['','f-0','f-0','f-1','f-1','f-3','f-6'],
+type: 'treemap',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_treemapDiv4, data, layout);            </script>
+</div>
+</div></div>
+<div class="col-md-4" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Treemap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='treemapDiv5' ></div>
+    <script>
+        var target_treemapDiv5 = document.getElementById('treemapDiv5');
+        var layout = {
+    height: 200,
+    width: 300,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['f-1','f-6','f-4','f-0','f-3','f-2','f-5'],
+labels: ['386BSD','Darwin','DragonFly BSD','FreeBSD','NetBSD','OpenBSD','macOS'],
+parents: ['','f-0','f-0','f-1','f-1','f-3','f-6'],
+type: 'treemap',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_treemapDiv5, data, layout);            </script>
+</div>
+</div></div>
+<div class="col-md-4" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Treemap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='treemapDiv6' ></div>
+    <script>
+        var target_treemapDiv6 = document.getElementById('treemapDiv6');
+        var layout = {
+    height: 200,
+    width: 300,
+    showlegend: false,
+    margin: {
+    t: 0,
+    b: 0,
+    l: 0,
+    r: 0,
+    pad: 0,
+    autoexpand: true},
+
+
+};
+
+//<!--
+//This is the Tablesaw trace_template with the added labels and parents fields.
+//Tablesaw is under the Apache 2.0 license.
+//-->
+var trace0 =
+{
+ids: ['f-1','f-6','f-4','f-0','f-3','f-2','f-5'],
+labels: ['386BSD','Darwin','DragonFly BSD','FreeBSD','NetBSD','OpenBSD','macOS'],
+parents: ['','f-0','f-0','f-1','f-1','f-3','f-6'],
+type: 'treemap',
+name: '',
+};
+
+
+        var data = [ trace0];
+Plotly.newPlot(target_treemapDiv6, data, layout);            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<br>
+</div>
+</div>
+</div>
+
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4567/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../../bootstrap-4.1/js/bootstrap.bundle.min.js"></script>
+<script src="../../bootstrap-4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

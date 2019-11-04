@@ -1,0 +1,414 @@
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<!-- Bootstrap core CSS -->
+<link href="../../bootstrap-4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<!-- Custom styles -->
+<link href="../../application/demo-custom.css" rel="stylesheet">
+</head>
+<body>
+<!-- Plotly JavaScript
+================================================== -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand" href="../../index.html">WebApp Demo</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+<li class="nav-item">
+  <a class="nav-link
+ active"
+ href="../bootstrap.html"
+ >Components</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="../../about/project.html"
+ >About</a>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<form class="form-inline my-2 my-md-0" action="http://localhost:4567/search">
+<input class="form-control" type="text" placeholder="Search...">
+</form>
+</ul>
+</div>
+</div>
+</nav>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<null>
+<br><ul class="nav nav-tabs">
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="../bootstrap.html"
+ >Bootstrap</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+"
+ href="../tables.html"
+ >Tables</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link
+ active"
+ href="../charts.html"
+ >Charts</a>
+</li>
+</ul>
+<null>
+<div style="margin:6px;">
+<div class="btn-toolbar" role="toolbar">
+<div class="btn-group mr-2" role="group">
+<a href="../charts.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+All</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="vbar.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+VBar</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="hbar.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+HBar</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="line.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Line</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="area.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Area</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="pie.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Pie</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="timeseries.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Timeseries</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="scatter.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Scatter</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="bubble.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Bubble</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="histogram.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Histogram</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="heatmap.html" class="btn btn-secondary btn-sm active" style="color: black;background-color: #d9d9d9;border-color: #cccccc;">
+Heatmap</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="candlestick.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Candlestick</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="ohlc.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+OHLC</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="treemap.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Treemap</a>
+</div>
+<div class="btn-group mr-2" role="group">
+<a href="sunburst.html" class="btn btn-secondary btn-sm" style="color: black;background-color: #f2f2f2;border-color: #cccccc;">
+Sunburst</a>
+</div>
+</div>
+</div>
+<div style="border-bottom:1px solid #dee2e6;">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<null>
+<br>
+<null>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-12" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Heatmap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='heatmapDiv1' ></div>
+    <script>
+        var target_heatmapDiv1 = document.getElementById('heatmapDiv1');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+
+
+};
+
+var trace0 =
+{
+x: ['AECOM','Abiomed, Inc.','Applied Therapeutics, Inc.','DocuSign, Inc.','Dropbox, Inc.','Facebook, Inc.','Square, Inc','salesforce.com, inc.'],
+y: ['Healthcare','Services','Technology'],
+z: [[0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,],[1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,],[0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,],],
+xaxis: 'x',
+yaxis: 'y',
+type: 'heatmap',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_heatmapDiv1, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Heatmap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='heatmapDiv2' ></div>
+    <script>
+        var target_heatmapDiv2 = document.getElementById('heatmapDiv2');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+
+
+};
+
+var trace0 =
+{
+x: ['AECOM','Abiomed, Inc.','Applied Therapeutics, Inc.','DocuSign, Inc.','Dropbox, Inc.','Facebook, Inc.','Square, Inc','salesforce.com, inc.'],
+y: ['Healthcare','Services','Technology'],
+z: [[0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,],[1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,],[0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,],],
+xaxis: 'x',
+yaxis: 'y',
+type: 'heatmap',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_heatmapDiv2, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+<div class="col-md-6" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Heatmap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='heatmapDiv3' ></div>
+    <script>
+        var target_heatmapDiv3 = document.getElementById('heatmapDiv3');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+
+
+};
+
+var trace0 =
+{
+x: ['AECOM','Abiomed, Inc.','Applied Therapeutics, Inc.','DocuSign, Inc.','Dropbox, Inc.','Facebook, Inc.','Square, Inc','salesforce.com, inc.'],
+y: ['Healthcare','Services','Technology'],
+z: [[0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,],[1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,],[0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,],],
+xaxis: 'x',
+yaxis: 'y',
+type: 'heatmap',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_heatmapDiv3, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<null>
+<div class="container">
+<div class="row">
+<div class="col-md-4" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Heatmap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='heatmapDiv4' ></div>
+    <script>
+        var target_heatmapDiv4 = document.getElementById('heatmapDiv4');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+
+
+};
+
+var trace0 =
+{
+x: ['AECOM','Abiomed, Inc.','Applied Therapeutics, Inc.','DocuSign, Inc.','Dropbox, Inc.','Facebook, Inc.','Square, Inc','salesforce.com, inc.'],
+y: ['Healthcare','Services','Technology'],
+z: [[0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,],[1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,],[0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,],],
+xaxis: 'x',
+yaxis: 'y',
+type: 'heatmap',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_heatmapDiv4, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+<div class="col-md-4" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Heatmap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='heatmapDiv5' ></div>
+    <script>
+        var target_heatmapDiv5 = document.getElementById('heatmapDiv5');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+
+
+};
+
+var trace0 =
+{
+x: ['AECOM','Abiomed, Inc.','Applied Therapeutics, Inc.','DocuSign, Inc.','Dropbox, Inc.','Facebook, Inc.','Square, Inc','salesforce.com, inc.'],
+y: ['Healthcare','Services','Technology'],
+z: [[0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,],[1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,],[0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,],],
+xaxis: 'x',
+yaxis: 'y',
+type: 'heatmap',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_heatmapDiv5, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+<div class="col-md-4" class="column">
+<null>
+<div class="card">
+<div class="card-header">
+Heatmap Chart
+</div>
+<div class="card-body">
+<null>
+<div id='heatmapDiv6' ></div>
+    <script>
+        var target_heatmapDiv6 = document.getElementById('heatmapDiv6');
+        var layout = {
+    height: 200, margin: {
+    autoexpand: false,
+    l: 40,
+    r: 5,
+    b: 30,
+    t: 5
+  },
+    width: 500,
+
+
+};
+
+var trace0 =
+{
+x: ['AECOM','Abiomed, Inc.','Applied Therapeutics, Inc.','DocuSign, Inc.','Dropbox, Inc.','Facebook, Inc.','Square, Inc','salesforce.com, inc.'],
+y: ['Healthcare','Services','Technology'],
+z: [[0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,],[1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,],[0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,],],
+xaxis: 'x',
+yaxis: 'y',
+type: 'heatmap',
+name: '',
+};
+
+        var data = [ trace0];
+Plotly.newPlot(target_heatmapDiv6, data, layout, {displayModeBar: false});            </script>
+</div>
+</div></div>
+</div>
+</div>
+<br>
+<br>
+</div>
+</div>
+</div>
+
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4567/assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../../bootstrap-4.1/js/bootstrap.bundle.min.js"></script>
+<script src="../../bootstrap-4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
