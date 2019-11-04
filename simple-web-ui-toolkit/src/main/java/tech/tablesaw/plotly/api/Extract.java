@@ -1,20 +1,29 @@
 package tech.tablesaw.plotly.api;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.TreeMap;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import org.eclipse.jetty.util.TopologicalSort;
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
 
 class Extract {
 
     static TableInfo createPairs(Table table, String[] cols, Map<String, String> attCols, Map<String, Object> attDefaults) {
-        return createPairs(table, false, cols, attCols, attDefaults);
+        return createPairs(table, false, cols, attCols, attDefaults, Collections.EMPTY_MAP, Collections.EMPTY_MAP);
     }
 
-    static TableInfo createPairs(Table table, boolean familyTree, String[] cols, Map<String, String> attCols, Map<String, Object> attDefaults) {
+    static TableInfo createPairs(Table table, boolean familyTree, String[] cols, Map<String, String> attCols,
+            Map<String, Object> attDefaults,
+            Map<String, Function<List<Object>, Object>> attAggregates,
+            Map<String, Function<Object, Object>> attPresenters) {
         if (cols.length < 2) {
             throw new IllegalStateException("At least two columns needed");
         }
@@ -70,18 +79,65 @@ class Extract {
                     }
 
                     parents.add(parentId);
+                }
+            }
+        }
 
-                    Map<String, Object> attrs = attributes.get(labelId);
-                    attCols.forEach((name, colName) -> {
-                        if(attrs != null && attrs.containsKey(name)) {
-                            attributeLists.get(name).add(attrs.get(name));
-                        } else {
-                            attributeLists.get(name).add(attDefaults.get(name));
+        if (!attCols.isEmpty()) {
+            //add some attributes for parents too
+            List<String> sortedIds = new ArrayList<>(ids);
+            //XXX: Using helper class from Jetty, something similar will have to be re-implemented here.
+            TopologicalSort<String> topology = new TopologicalSort<>();
+            pairs.forEach((childId, parentId) -> topology.addDependency(childId, parentId));
+            topology.sort(sortedIds);
+            Collections.reverse(sortedIds);
+
+            attCols.forEach((name, colName) -> {
+                if (attAggregates.containsKey(name)) {
+                    //prepare aggregate list for parents
+                    Map<String, List<Object>> futureAggregates = new HashMap<>();
+
+                    for (String labelId : sortedIds) {
+                        Map<String, Object> attrs = attributes.get(labelId);
+                        //is it a parent?
+                        if (futureAggregates.containsKey(labelId)) {
+                            if (attrs == null) {
+                                attrs = new HashMap<>();
+                                attributes.put(labelId, attrs);
+                            }
+                            Function<List<Object>, Object> aggregate = attAggregates.get(name);
+                            attrs.put(name, aggregate.apply(futureAggregates.get(labelId)));
+                            //clean up
+                            futureAggregates.remove(labelId);
                         }
-                    });
+
+                        if (attrs != null && attrs.containsKey(name)) {
+                            String parentId = pairs.get(labelId);
+                            if (parentId != null) {
+                                List<Object> agg = futureAggregates.computeIfAbsent(parentId, (x) -> new ArrayList<>());
+
+                                agg.add(attrs.get(name));
+                            }
+                        }
+                    }
                 }
 
-            }
+                ids.stream().map(labelId -> {
+                    Function<Object, Object> presenter = attPresenters.get(name);
+                    if(presenter == null) {
+                        presenter = (o) -> o;
+                    }
+
+                    Map<String, Object> attrs = attributes.get(labelId);
+
+                    if (attrs != null && attrs.containsKey(name)) {
+                        return presenter.apply(attrs.get(name));
+                    } else {
+                        return presenter.apply(attDefaults.get(name));
+                    }
+                }).collect(Collectors.toCollection(() -> attributeLists.get(name)));
+            });
+
         }
 
         Map<String, Object[]> attributeArrays = new HashMap<>();

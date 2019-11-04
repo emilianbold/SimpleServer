@@ -18,7 +18,9 @@ package quicksilver.webapp.simpleui.bootstrap4.charts;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import quicksilver.webapp.simpleui.html.components.HTMLText;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.plotly.api.TreemapPlot;
@@ -57,19 +59,23 @@ public class TSTreeMapChartPanel extends TSFigurePanel {
     private TSTreeMapChartPanel(Builder builder) {
         this(builder.layout, builder.table, builder.divName,
                 builder.familyTree ? ColumnRelation.FamilyTree : ColumnRelation.SubCategories,
-                builder.columns, new HashMap<>(builder.attributes), new HashMap<>(builder.attributeDefaults));
+                builder.columns, new HashMap<>(builder.attributes), new HashMap<>(builder.attributeDefaults),
+                new HashMap<>(builder.attAggregates), new HashMap<>(builder.attPresenters));
     }
 
     public TSTreeMapChartPanel(Layout layout, Table table, String divName, String... columns) {
-        this(layout, table, divName, ColumnRelation.SubCategories, columns, Collections.EMPTY_MAP,  Collections.EMPTY_MAP);
+        this(layout, table, divName, ColumnRelation.SubCategories, columns, Collections.EMPTY_MAP,  Collections.EMPTY_MAP, Collections.EMPTY_MAP, Collections.EMPTY_MAP);
     }
 
-    private TSTreeMapChartPanel(Layout layout, Table table, String divName, ColumnRelation relationship, String[] columns, Map<String, String> attColumns, Map<String, Object> attDefaults) {
+    private TSTreeMapChartPanel(Layout layout, Table table, String divName, ColumnRelation relationship, String[] columns, Map<String, String> attColumns,
+            Map<String, Object> attDefaults,
+            Map<String, Function<List<Object>, Object>> attAggregates,
+            Map<String, Function<Object, Object>> attPresenters) {
         super(divName);
 
         Figure figure = null;
         try {
-            figure = TreemapPlot.create(layout, table, relationship == ColumnRelation.FamilyTree, columns, attColumns, attDefaults);
+            figure = TreemapPlot.create(layout, table, relationship == ColumnRelation.FamilyTree, columns, attColumns, attDefaults, attAggregates, attPresenters);
         } catch ( Exception e ) {
             e.printStackTrace();
         }
@@ -82,7 +88,7 @@ public class TSTreeMapChartPanel extends TSFigurePanel {
     }
 
     public TSTreeMapChartPanel(Table table, String divName, int width, int height, boolean enableLegend, String... columns) {
-        this(defaultLayout(width, height, enableLegend), table, divName, ColumnRelation.SubCategories, columns, Collections.EMPTY_MAP, Collections.EMPTY_MAP);
+        this(defaultLayout(width, height, enableLegend), table, divName, ColumnRelation.SubCategories, columns, Collections.EMPTY_MAP, Collections.EMPTY_MAP, Collections.EMPTY_MAP, Collections.EMPTY_MAP);
     }
 
     public static Layout.LayoutBuilder createLayoutBuilder(int width, int height, boolean enabledLegend) {
@@ -102,6 +108,8 @@ public class TSTreeMapChartPanel extends TSFigurePanel {
         private boolean familyTree;
         private final Map<String, String> attributes = new HashMap<>();
         private final Map<String, Object> attributeDefaults = new HashMap<>();
+        private final Map<String, Function<List<Object>, Object>> attAggregates = new HashMap<>();
+        private final Map<String, Function<Object, Object>> attPresenters = new HashMap<>();
 
         private Builder(Table table, String divName, String[] columns) {
             this.table = table;
@@ -120,8 +128,18 @@ public class TSTreeMapChartPanel extends TSFigurePanel {
         }
 
         public Builder addAttribute(String attribute, String column, Object defaultValue) {
+            return addAttribute(attribute, column, defaultValue, null, null);
+        }
+
+        public Builder addAttribute(String attribute, String column, Object defaultValue, Function<List<Object>, Object> aggregate, Function<Object, Object> presenter) {
             attributes.put(attribute, column);
             attributeDefaults.put(attribute, defaultValue);
+            if(aggregate != null) {
+                attAggregates.put(attribute, aggregate);
+            }
+            if(presenter != null) {
+                attPresenters.put(attribute, presenter);
+            }
             return this;
         }
 

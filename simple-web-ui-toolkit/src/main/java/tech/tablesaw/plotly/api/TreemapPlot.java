@@ -1,6 +1,8 @@
 package tech.tablesaw.plotly.api;
 
+import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.plotly.components.Figure;
 import tech.tablesaw.plotly.components.Layout;
@@ -8,16 +10,16 @@ import tech.tablesaw.plotly.traces.TreemapTrace;
 
 public class TreemapPlot {
 
-    public static Figure create(String title, Table table, boolean familyTree, String[] cols, Map<String, String> attCols, Map<String, Object> attDefaults) {
-        return create(Layout.builder(title).build(), table, familyTree, cols, attCols, attDefaults);
+    public static Figure create(String title, Table table, boolean familyTree, String[] cols, Map<String, String> attCols, Map<String, Object> attDefaults, Map<String, Function<List<Object>, Object>> attAggregates, Map<String, Function<Object, Object>> attPresenters) {
+        return create(Layout.builder(title).build(), table, familyTree, cols, attCols, attDefaults, attAggregates, attPresenters);
     }
 
     /**
      * @param cols the columns in hierarchy order (smallest element first,
      * parent last)
      */
-    public static Figure create(Layout layout, Table table, boolean familyTree, String[] cols, Map<String, String> attCols, Map<String, Object> attDefaults) {
-        Extract.TableInfo info = Extract.createPairs(table, familyTree, cols, attCols, attDefaults);
+    public static Figure create(Layout layout, Table table, boolean familyTree, String[] cols, Map<String, String> attCols, Map<String, Object> attDefaults, Map<String, Function<List<Object>, Object>> attAggregates,  Map<String, Function<Object, Object>> attPresenters) {
+        Extract.TableInfo info = Extract.createPairs(table, familyTree, cols, attCols, attDefaults, attAggregates, attPresenters);
         Object[] labels = info.labels;
         Object[] labelParents = info.labelParents;
 

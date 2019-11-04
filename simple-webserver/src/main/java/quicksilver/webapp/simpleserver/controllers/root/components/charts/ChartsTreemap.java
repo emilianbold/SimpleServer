@@ -26,17 +26,41 @@ import quicksilver.webapp.simpleui.html.components.HTMLLineBreak;
 import tech.tablesaw.api.DoubleColumn;
 import tech.tablesaw.api.StringColumn;
 import tech.tablesaw.api.Table;
-import tech.tablesaw.columns.Column;
 import tech.tablesaw.columns.numbers.DoubleColumnType;
 import tech.tablesaw.plotly.components.Layout;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
+import java.util.OptionalDouble;
 import java.util.function.Function;
+import tech.tablesaw.columns.Column;
 
 public class ChartsTreemap extends AbstractComponentsChartsPage {
 
+    private static Function<List<Object>, Object> AGG_AVERAGE = new Function<List<Object>, Object>() {
+                                            @Override
+                                            public Object apply(List<Object> values) {
+                                                OptionalDouble average = values.stream()
+                                                        .mapToDouble((o) -> ((Double) o))
+                                                        .average();
+                                                double d = average.orElse(0.0d);
+
+                                                return d;
+                                            }
+                                        };
+    private static Function<List<Object>, Object> AGG_SUM = new Function<List<Object>, Object>() {
+                                            @Override
+                                            public Object apply(List<Object> values) {
+                                                double sum = values.stream()
+                                                        .mapToDouble((o) -> ((Double) o))
+                                                        .sum();
+                                                return sum;
+                                            }
+                                        };
     public ChartsTreemap() {
         super();
         toolbar.setActiveButton("Treemap");
@@ -132,18 +156,6 @@ public class ChartsTreemap extends AbstractComponentsChartsPage {
 
             //boundary (-range,+range)
             boundary = Math.max(Math.abs(minRange), Math.abs(maxRange));
-
-            final double fBoundary = boundary;
-            StringColumn color = numericChange.mapInto((Double t) -> {
-                if (t == null) {
-                    return "#7f7f7f";
-                } else {
-                    return color(-fBoundary, +fBoundary, t);
-                }
-            }, StringColumn.create("Color", numericChange.size()));
-
-            treemapTable.addColumns(color);
-
         } catch ( Throwable e ) {
             treemapTable = TSDataSetFactory.createSampleStockMarketEquities().getTSTable();
             e.printStackTrace();
@@ -151,6 +163,7 @@ public class ChartsTreemap extends AbstractComponentsChartsPage {
             //-10% to +10%
             boundary = 10d;
         }
+        final double range = boundary;
 
         Layout.LayoutBuilder layoutBuilder = TSTreeMapChartPanel.createLayoutBuilder(1043, 500, false);
 
@@ -158,9 +171,34 @@ public class ChartsTreemap extends AbstractComponentsChartsPage {
                 new BSCard(
                         TSTreeMapChartPanel.builder(treemapTable, "treemapDiv1", "Ticker", "Industry", "Sector")
                                 .layout(layoutBuilder.build())
-                                .addAttribute("text", "Change", "")
+                                //.addAttribute("text", "Change", "")
+                                .addAttribute("text", "ChangeAsNumber", 0d,
+                                        AGG_AVERAGE,
+                                        new Function() {
+                                            @Override
+                                            public Object apply(Object o) {
+                                                if(o == null) {
+                                                    return "";
+                                                }
+                                                double d = new BigDecimal((Double)o * 100).setScale(2, RoundingMode.UP).doubleValue();
+                                                return String.format("%.2f%%", d);
+                                            }
+                                        })
+                                //XXX: Using aggregation on values makes the chart look off since branchvalues="remainder" by default.
+                                //XXX: Also, forcing branchvalues="total" means you have to be really careful with doable values as they might not add up perfectly (3.9999 vs 4.0) and Plotly will just throw an error.
                                 .addAttribute("values", "MarketCap", 0d)
-                                .addAttribute("marker.colors", "Color", "#7f7f7f")
+                                .addAttribute("marker.colors", "ChangeAsNumber", 0d,
+                                        AGG_AVERAGE,
+                                        new Function<Object, Object>() {
+                                            @Override
+                                            public Object apply(Object o) {
+                                                if(o == null) {
+                                                    return "#1f77b4";
+                                                }
+                                                Double d = (Double) o;
+                                                return color(-range, +range, d);
+                                            }
+                                        })
                                 .build(),
                         "Treemap Chart")
         );
